@@ -32,3 +32,23 @@ function setupModeButtons() {
   }
 }
 
+function setupSquares() {
+  for (let i = 0; i < squares.length; i++) {
+    //add click listeners to squares
+    squares[i].addEventListener("click", function() {
+      //grab color of clicked squares
+      let clickedColor = this.style.background;
+      //compare color to pickedColor
+      if (clickedColor === pickedColor) {
+        messageDisplay.textContent = "Correct!";
+        resetButton.textContent = "Play Again?";
+        changeColors(clickedColor);
+        h1.style.background = clickedColor;
+      } else {
+        this.style.background = "#232323";
+        messageDisplay.textContent = "Try Again";
+      }
+    });
+  }
+}
+

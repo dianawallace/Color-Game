@@ -76,3 +76,18 @@ resetButton.addEventListener("click", function() {
   reset();
 });
 
+
+
+
+function generateRandomColors(num) {
+  // make an array
+  let arr = [];
+  // repeat num times
+  for (let i = 0; i < num; i++) {
+    // get random color and push into array
+    arr.push(randomColor());
+  }
+  // return that array
+  return arr;
+}
+

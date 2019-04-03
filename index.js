@@ -76,7 +76,18 @@ resetButton.addEventListener("click", function() {
   reset();
 });
 
+function changeColors(color) {
+  // loop through all squares
+  for (let i = 0; i < squares.length; i++) {
+    // change each color to match given color
+    squares[i].style.background = color;
+  }
+}
 
+function pickColor() {
+  let random = Math.floor(Math.random() * colors.length);
+  return colors[random];
+}
 
 
 function generateRandomColors(num) {
